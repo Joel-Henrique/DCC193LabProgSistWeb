@@ -1,0 +1,13 @@
+import java.sql.Time;
+import java.util.Date;
+
+public class locacao {
+    private Date dataLocacao;
+    private Time horaLocacao;
+    private Date dataDevolucao;
+    private Time horaDevolucao;
+    private long kilometragemInicial;
+    private long kilometragemFinal;
+    private long valorLocacao;
+
+}
