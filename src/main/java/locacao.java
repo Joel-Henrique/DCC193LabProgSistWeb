@@ -8,6 +8,8 @@ public class locacao {
     private Time horaDevolucao;
     private long kilometragemInicial;
     private long kilometragemFinal;
+
+    private double CalculaLocacao;
     private long valorLocacao;
 
 }

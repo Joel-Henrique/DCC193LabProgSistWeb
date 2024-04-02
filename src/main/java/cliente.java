@@ -1,5 +1,3 @@
-package br.ufjf.scLab;
-
 public class cliente {
     private String nome;
     private String cpf;
