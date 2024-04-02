@@ -1,5 +1,6 @@
 public abstract class AutomovelEstado {
-    //get estado
+
+    public abstract String getEstado();
     public boolean DisponibilizarAutomovel(Automovel automovel){
         return false;
     }

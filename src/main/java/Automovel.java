@@ -9,5 +9,6 @@ public class Automovel {
     private String chassi;
     private String marca;
     private String modelo;
+    private AutomovelEstado estado;
 
 }
