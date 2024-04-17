@@ -1,3 +1,5 @@
+package br.ufjf.scLab.model.entity;
+
 public abstract class AutomovelEstado {
 
     public abstract String getEstado();

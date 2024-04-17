@@ -1,3 +1,5 @@
+package br.ufjf.scLab.model.entity;
+
 import java.sql.Time;
 import java.time.LocalDateTime;
 import java.util.Date;

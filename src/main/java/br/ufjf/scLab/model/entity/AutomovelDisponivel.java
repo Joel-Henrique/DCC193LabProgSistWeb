@@ -1,8 +1,10 @@
+package br.ufjf.scLab.model.entity;
+
 public class AutomovelDisponivel extends AutomovelEstado{
     private AutomovelDisponivel() {};
     private static AutomovelDisponivel instance = new AutomovelDisponivel();
     /*
-    public  static AutomovelDisponivel getInstance(){
+    public  static br.ufjf.scLab.model.entity.AutomovelDisponivel getInstance(){
         return instance;
     }
     */
