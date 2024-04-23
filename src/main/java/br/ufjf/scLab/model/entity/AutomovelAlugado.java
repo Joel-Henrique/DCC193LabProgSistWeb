@@ -5,12 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class AutomovelAlugado extends AutomovelEstado{
     private AutomovelAlugado() {};
+
     private static AutomovelAlugado instance = new AutomovelAlugado();
     /*
     public  static br.ufjf.scLab.model.entity.AutomovelAlugado getInstance(){

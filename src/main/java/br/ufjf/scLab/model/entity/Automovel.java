@@ -1,22 +1,26 @@
 package br.ufjf.scLab.model.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+/*@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
+*/
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Automovel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String placa;
     private String cor;
     private int numeroPortas;
@@ -27,6 +31,8 @@ public class Automovel {
     private String chassi;
     private String marca;
     private String modelo;
+
+    // @OneToOne(cascade = CascadeType.ALL)
     private AutomovelEstado estado;
 
 }
