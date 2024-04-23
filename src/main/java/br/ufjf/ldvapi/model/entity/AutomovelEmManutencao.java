@@ -1,8 +1,10 @@
-public class AutomovelEmManutencao extends AutomovelEstado{
+package br.ufjf.ldvapi.model.entity;
+
+public class AutomovelEmManutencao extends AutomovelEstado {
     private AutomovelEmManutencao() {};
     private static AutomovelEmManutencao instance = new AutomovelEmManutencao();
     /*
-    public  static AutomovelEmManutencao getInstance(){
+    public  static br.ufjf.scLab.model.entity.AutomovelEmManutencao getInstance(){
         return instance;
     }
     */

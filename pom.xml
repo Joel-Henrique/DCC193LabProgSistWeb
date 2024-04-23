@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.ufjf</groupId>
-	<artifactId>scLab</artifactId>
+	<artifactId>lab199ldvapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>scLab</name>
 	<description>projeto sistemas web</description>
