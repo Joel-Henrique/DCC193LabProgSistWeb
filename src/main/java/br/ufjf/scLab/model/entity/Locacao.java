@@ -14,6 +14,7 @@ public class Locacao {
     private long quilometragemInicial;
     private long quilometragemFinal;
     private double valorLocacao;
+    private int finalizada;
 
     @ManyToOne
     @JoinColumn(name = "automovel_id")
@@ -23,5 +24,4 @@ public class Locacao {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    // getters and setters
 }

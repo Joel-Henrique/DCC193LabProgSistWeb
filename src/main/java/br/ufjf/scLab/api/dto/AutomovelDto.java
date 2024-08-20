@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,6 +24,8 @@ public class AutomovelDto {
     private String marca;
     private String modelo;
     private String estado;
+    private String categoria;
+    private List<Long> idsLocacoes;
 
     public static AutomovelDto create(Automovel automovel) {
         ModelMapper modelMapper = new ModelMapper();

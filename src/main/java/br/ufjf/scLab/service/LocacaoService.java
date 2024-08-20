@@ -5,6 +5,10 @@ import br.ufjf.scLab.model.repository.LocacaoRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class LocacaoService {
 
@@ -23,4 +27,17 @@ public class LocacaoService {
     public Locacao salvar(Locacao locacao) {
         return locacaoRepository.save(locacao);
     }
+
+    public List<Locacao> getLocacoesByIds(List<Long> idsLocacoes) {
+        List<Locacao> locacoes = new ArrayList<>();
+        for (Long id : idsLocacoes) {
+            Optional<Locacao> locacao = locacaoRepository.findById(id);
+            locacao.ifPresent(locacoes::add);
+        }
+        return locacoes;
+    }
+
+    public Object getLocacoes() { return locacaoRepository.findAll(); }
+
+    public Optional<Locacao> getLocacaoById(Long id) { return locacaoRepository.findById(id); }
 }

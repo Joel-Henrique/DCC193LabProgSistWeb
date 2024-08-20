@@ -1,10 +1,17 @@
 package br.ufjf.scLab.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cliente {
 
     @Id
@@ -18,6 +25,8 @@ public class Cliente {
     private int cep;
     private String email;
 
+    @Getter
     @OneToMany(mappedBy = "cliente")
     private List<Locacao> locacoes;
+
 }

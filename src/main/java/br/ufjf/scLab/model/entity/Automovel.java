@@ -25,7 +25,7 @@ public class Automovel {
     private String marca;
     private String modelo;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "automovel_estado_id")
     private AutomovelEstado estado;
 
@@ -36,7 +36,4 @@ public class Automovel {
     @OneToMany(mappedBy = "automovel")
     private List<Locacao> locacoes;
 
-    public AutomovelEstado getEstado() {
-            return this.estado;
-    }
 }
