@@ -35,4 +35,8 @@ public class Automovel {
 
     @OneToMany(mappedBy = "automovel")
     private List<Locacao> locacoes;
+
+    public AutomovelEstado getEstado() {
+            return this.estado;
+    }
 }

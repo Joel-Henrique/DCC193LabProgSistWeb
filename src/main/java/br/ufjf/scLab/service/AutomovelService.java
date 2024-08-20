@@ -6,6 +6,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AutomovelService {
@@ -29,7 +30,7 @@ public class AutomovelService {
     @Transactional
     public Automovel atualizar(Automovel automovel) { return automovelRepository.save(automovel); }
 
-    @Transactional
     public List<Automovel> getAutomoveis() { return automovelRepository.findAll(); }
 
+    public Optional<Automovel> getAutomovelByPlaca(String id) { return automovelRepository.findById(id); }
 }

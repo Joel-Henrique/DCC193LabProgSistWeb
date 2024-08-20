@@ -18,4 +18,8 @@ public class AutomovelEstado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String estado;
+
+    public String getEstado() {
+        return this.estado;
+    }
 }
