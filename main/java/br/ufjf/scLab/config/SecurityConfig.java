@@ -1,5 +1,4 @@
 package br.ufjf.scLab.config;
-
 import br.ufjf.scLab.security.JwtAuthFilter;
 import br.ufjf.scLab.security.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
