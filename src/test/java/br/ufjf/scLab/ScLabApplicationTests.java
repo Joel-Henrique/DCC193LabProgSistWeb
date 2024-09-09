@@ -1,4 +1,4 @@
-package br.ufjf.ldvapi;
+package br.ufjf.scLab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
