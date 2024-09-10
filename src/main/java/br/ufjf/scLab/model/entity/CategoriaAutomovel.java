@@ -1,6 +1,6 @@
 package br.ufjf.scLab.model.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 

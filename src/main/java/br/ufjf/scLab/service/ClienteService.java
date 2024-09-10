@@ -2,8 +2,8 @@ package br.ufjf.scLab.service;
 
 import br.ufjf.scLab.model.entity.Cliente;
 import br.ufjf.scLab.model.repository.ClienteRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;

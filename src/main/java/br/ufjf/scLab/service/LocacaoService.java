@@ -2,8 +2,8 @@ package br.ufjf.scLab.service;
 
 import br.ufjf.scLab.model.entity.Locacao;
 import br.ufjf.scLab.model.repository.LocacaoRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;

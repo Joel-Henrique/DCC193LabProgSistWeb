@@ -4,6 +4,7 @@ import br.ufjf.scLab.model.entity.Locacao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.modelmapper.ModelMapper;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,8 @@ public class LocacaoDto {
     private boolean finalizada;
 
     public static Object create(Locacao locacao) {
-
+        ModelMapper modelMapper = new ModelMapper();
+        LocacaoDto dto = modelMapper.map(locacao, LocacaoDto.class);
+        return dto;
     }
 }

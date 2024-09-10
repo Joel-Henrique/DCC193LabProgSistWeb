@@ -2,8 +2,8 @@ package br.ufjf.scLab.service;
 
 import br.ufjf.scLab.model.entity.Luxo;
 import br.ufjf.scLab.model.repository.LuxoRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class LuxoService {

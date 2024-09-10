@@ -1,6 +1,6 @@
 package br.ufjf.scLab.model.entity;
 
-import jakarta.persistence.Entity;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity

@@ -2,8 +2,8 @@ package br.ufjf.scLab.service;
 
 import br.ufjf.scLab.model.entity.Automovel;
 import br.ufjf.scLab.model.repository.AutomovelRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
