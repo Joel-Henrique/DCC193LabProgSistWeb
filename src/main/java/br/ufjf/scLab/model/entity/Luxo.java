@@ -4,6 +4,7 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
+@DiscriminatorValue("Luxo")
 @Data
 public class Luxo extends CategoriaAutomovel{
 }
