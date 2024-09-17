@@ -28,8 +28,8 @@ public class SwaggerConfig {
                         .basePackage("br.ufjf.scLab.api.controller"))
                 .paths(PathSelectors.any())
                 .build()
-//                .securityContexts(Arrays.asList(securityContext()))
-//                .securitySchemes(Arrays.asList(apiKey()))
+                .securityContexts(Arrays.asList(securityContext()))
+                .securitySchemes(Arrays.asList(apiKey()))
                 .apiInfo(apiInfo());
     }
 
