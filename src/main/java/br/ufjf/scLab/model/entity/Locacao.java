@@ -1,9 +1,16 @@
 package br.ufjf.scLab.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Locacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +30,14 @@ public class Locacao {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
+//    public void setAutomovel(Automovel automovel) {
+//        this.automovel = automovel;
+//    }
+//
+//    public void setCliente(Cliente cliente) {
+//        this.cliente = cliente;
+//    }
+//
+//    public void setId(Long id) {
+//    }
 }

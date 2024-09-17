@@ -37,7 +37,7 @@ public class LocacaoService {
         return locacoes;
     }
 
-    public Object getLocacoes() { return locacaoRepository.findAll(); }
+    public List<Locacao> getLocacoes() { return locacaoRepository.findAll(); }
 
     public Optional<Locacao> getLocacaoById(Long id) { return locacaoRepository.findById(id); }
 }

@@ -19,7 +19,7 @@ public class LocacaoDto {
     private long quilometragemInicial;
     private long quilometragemFinal;
     private double valorLocacao;
-    private Long idAutomovel;
+    private String placaAutomovel;
     private Long idCliente;
     private boolean finalizada;
 
