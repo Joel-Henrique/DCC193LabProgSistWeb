@@ -5,6 +5,7 @@ import br.ufjf.scLab.security.JwtService;
 import br.ufjf.scLab.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -48,27 +49,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors().disable()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/v1/automoveis/**")
-                .authenticated()
-                .antMatchers("/api/v1/automoveis/cadastrarAutomovel")
-                .hasAnyRole("ADMIN")
-                .antMatchers("/api/v1/automoveis/atualizar/**")
-                .hasAnyRole("ADMIN")
-                .antMatchers("/api/v1/automoveis/excluir/**")
-                .hasAnyRole("ADMIN")
-                .antMatchers("/api/v1/clientes/**")
-                .permitAll()
-                .antMatchers("/api/v1/locacoes/**")
-                .permitAll()
-                .antMatchers( "/api/v1/usuarios/**")
-                .permitAll()
+                .antMatchers(HttpMethod.POST,"/api/v1/automoveis/**").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.PUT,"/api/v1/automoveis/**").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE,"/api/v1/automoveis/**").hasAnyRole("ADMIN")
+                .antMatchers("/api/v1/automoveis/**").authenticated()
+                .antMatchers("/api/v1/clientes/**").permitAll()
+                .antMatchers("/api/v1/locacoes/**").hasAnyRole("ADMIN")
+                .antMatchers("/api/v1/usuarios/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
-        ;
     }
 
     @Override
